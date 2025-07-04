@@ -62,30 +62,21 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     if resolution[0] == "1920x1080":
         kk = re.sub(r'(HDRip)', '1080p', kk)
     
-    # Modified to always add 480p before the extension
-    base_name = kk.replace(f".{aa}", "")
-    # Remove existing quality indicators to avoid duplication
-    base_name = re.sub(r'(480p|720p|1080p|HDRip)', '', base_name)
-    # Clean up any double spaces
-    base_name = re.sub(r'\s+', ' ', base_name).strip()
-    # Add 480p and .mp4 extension
-    out_put_file_name = f"{base_name} 480p.mp4"
+    out_put_file_name = kk.replace(f".{aa}", ".mkv")
     
     progress = output_directory + "/" + "progress.txt"
     with open(progress, 'w') as f:
         pass
     
-    # Modified FFmpeg command for MP4 output with proper format settings
     file_genertor_command = f"""ffmpeg -hide_banner -loglevel quiet -progress '{progress}' \
     -i '{video_file}' \
     -c:v {codec[0]} -crf {crf[0]} -preset {preset[0]} \
-    -map 0 -c:s mov_text -pix_fmt yuv420p -s {resolution[0]} -b:v 150k \
-    -c:a aac -b:a {audio_b[0]} \
-    -movflags +faststart \
+    -map 0 -c:s copy -pix_fmt yuv420p -s {resolution[0]} -b:v 150k \
+    -c:a libopus -b:a {audio_b[0]} \
     -metadata title="JOIN US ON TELEGRAM: @SuperToppers" \
     -metadata:s:v title="Encoded by @ProToppers" \
     -metadata:s:a title="@ProToppers" \
-    -f mp4 \
+    -metadata:s:s title="@ProToppers" \
     '{out_put_file_name}' -y"""
     
     COMPRESSION_START_TIME = time.time()
