@@ -116,7 +116,7 @@ async def incoming_compress_message_f(update):
 
         # Use the file name as the caption
         file_name = os.path.basename(o)
-        caption = f"<blockquote>{file_name}</blockquote>\n\n<blockquote>Downloaded: {downloaded_time}\nCompressed: {compressed_time}</blockquote>\nENCODED BY- @KGN_Compress_Group\nBOT BY -@KGN_BOTZ"
+        caption = f"<blockquote><b>{file_name}</b></blockquote>\n\n<blockquote><b>Downloaded: {downloaded_time}\nCompressed: {compressed_time}</b></blockquote>"
 
         await bot.send_document(
             chat_id=update.chat.id,
