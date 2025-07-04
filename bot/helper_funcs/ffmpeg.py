@@ -73,10 +73,10 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     -c:v {codec[0]} -crf {crf[0]} -preset {preset[0]} \
     -map 0 -c:s copy -pix_fmt yuv420p -s {resolution[0]} -b:v 150k \
     -c:a libopus -b:a {audio_b[0]} \
-    -metadata title="JOIN US ON TELEGRAM: @supertoppers" \
+    -metadata title="JOIN US ON TELEGRAM: @SuperToppers" \
     -metadata:s:v title="Encoded by @ProToppers" \
-    -metadata:s:a title="@chrunchyrool" \
-    -metadata:s:s title="@chrunchyrool" \
+    -metadata:s:a title="@ProToppers" \
+    -metadata:s:s title="@ProToppers" \
     '{out_put_file_name}' -y"""
     
     COMPRESSION_START_TIME = time.time()
