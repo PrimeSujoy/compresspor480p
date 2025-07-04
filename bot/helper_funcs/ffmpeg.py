@@ -62,8 +62,14 @@ async def convert_video(video_file, output_directory, total_time, bot, message, 
     if resolution[0] == "1920x1080":
         kk = re.sub(r'(HDRip)', '1080p', kk)
     
-    # Changed from .mkv to .mp4
-    out_put_file_name = kk.replace(f".{aa}", ".mp4")
+    # Modified to always add 480p before the extension
+    base_name = kk.replace(f".{aa}", "")
+    # Remove existing quality indicators to avoid duplication
+    base_name = re.sub(r'(480p|720p|1080p|HDRip)', '', base_name)
+    # Clean up any double spaces
+    base_name = re.sub(r'\s+', ' ', base_name).strip()
+    # Add 480p and .mp4 extension
+    out_put_file_name = f"{base_name} 480p.mp4"
     
     progress = output_directory + "/" + "progress.txt"
     with open(progress, 'w') as f:
