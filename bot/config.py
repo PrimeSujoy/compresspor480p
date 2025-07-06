@@ -10,7 +10,7 @@ class Config(object):
     LOG_CHANNEL = get_config("LOG_CHANNEL", "-1002872961182")
     UPDATES_CHANNEL = get_config("UPDATES_CHANNEL", "ProToppers") # Without `@` LOL
      # Get these values from my.telegram.org
-    AUTH_USERS = [8181241262, -1002833051403]
+    AUTH_USERS = [8181241262, -1002833051403, 1203096654, -1002762603310, 1368753935, 6678172354]
 # array , simplest method was AUTH_USERS = [] ; AUTH_USERS.append(your telegram id) 🌹
     TG_BOT_TOKEN = get_config("TG_BOT_TOKEN", "8024060891:AAHVlnrgbx3Ttme8pbzM0jUs7Y0tGrJJp0k")
     # the download location, where the HTTP Server runs
