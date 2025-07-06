@@ -24,7 +24,7 @@
     },
     "TG_BOT_TOKEN": {
       "description": "Your bot token, as a string. Get this from @BotFather",
-      "value": "8000239655:AAF4UjgoriM0wNBbQgGFMu4PpG49UGRTTCA",
+      "value": "8024060891:AAHVlnrgbx3Ttme8pbzM0jUs7Y0tGrJJp0k",
       "required": true
     },
     "APP_ID": {
@@ -39,7 +39,7 @@
     },
     "BOT_USERNAME": {
       "description": "Your Bot Username. Without `@` before Username!",
-      "value": "Compressor480p_Bot",
+      "value": "Compressor480p_Robot",
       "required": true
     },
     "LOG_CHANNEL": {
@@ -49,7 +49,7 @@
     },
     "AUTH_USERS": {
       "description": "Allow only pre-defined users to use this bot as Sudo User. Separate with Space. Just for using Admin Commands.",
-      "value": "8181241262, -1002833051403",
+      "value": "8181241262, -1002833051403, 5487643307, 7813152875, 8019639744, 7198013412, 6855989110, 7328629001",
       "required": true
     }
   },
