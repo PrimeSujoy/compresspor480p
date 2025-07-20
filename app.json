@@ -29,12 +29,12 @@
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "22182189",
+      "value": "24122570",
       "required": true
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "5e7c4088f8e23d0ab61e29ae11960bf5",
+      "value": "33bbfdf4cbc5dedc27257d1d3934e42a",
       "required": true
     },
     "BOT_USERNAME": {
